@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juma Musima | Attorney & Developer</title>
+    <style>
+/* Premium Styling Enhancements */
+:root {
+    /* Refined color palette */
+    --primary: #1a2a3a;          /* Deeper blue for greater sophistication */
+    --secondary: #3d7eaa;        /* More subdued blue */
+    --accent: #c0392b;           /* Deeper red for elegance */
+    --light: #f5f7fa;            /* Softer background */
+    --dark: #0f1922;             /* Darker shade for contrast */
+    --text: #2d3436;             /* Refined text color */
+    --light-text: #7f8c8d;       /* For subtle text elements */
+    --card-bg: #ffffff;          /* Card background */
+    --border-radius: 8px;        /* Consistent border radius */
+    --shadow: 0 10px 30px rgba(0,0,0,0.08); /* Softer shadow */
+    --transition: all 0.3s ease; /* Smooth transitions */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text);
+    line-height: 1.7;
+    background-color: var(--light);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-size: 2.6rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 0.85rem 1.8rem;
+    border-radius: var(--border-radius);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(61, 126, 170, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(192, 57, 43, 0.25);
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Header Styles - Enhanced */
+header {
+    background-color: rgba(26, 42, 58, 0.95);
+    color: white;
+    padding: 1.2rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2.5rem;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+/* Hero Section - Enhanced */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(15, 25, 34, 0.85), rgba(15, 25, 34, 0.9)), url('https://source.unsplash.com/random/1600x900/?code') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(61, 126, 170, 0.1) 0%, rgba(15, 25, 34, 0) 70%);
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 1.8rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+}
+
+/* About Section - Enhanced */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.about-image:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    border-top: 4px solid var(--accent);
+    border-left: 4px solid var(--accent);
+}
+
+.about-image:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border-bottom: 4px solid var(--secondary);
+    border-right: 4px solid var(--secondary);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+    font-size: 1.05rem;
+}
+
+/* Services Section - Enhanced */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    transition: var(--transition);
+}
+
+.card:hover .service-icon {
+    color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--light-text);
+    line-height: 1.7;
+}
+
+/* Projects Section - Enhanced */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    padding: 0.85rem 1.8rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1.05rem;
+    margin: 0 0.8rem;
+    transition: var(--transition);
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.tab-btn:hover {
+    color: var(--secondary);
+}
+
+.tab-btn.active {
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    height: 280px;
+    box-shadow: var(--shadow);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(15, 25, 34, 0.95), rgba(15, 25, 34, 0.7));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+
+.project-info h3 {
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+.project-info p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+/* Database Visualization - Enhanced */
+.database-demo {
+    margin-top: 3rem;
+    overflow-x: auto;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.database-demo h3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+table th {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+table tr {
+    transition: var(--transition);
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(245, 247, 250, 0.7);
+}
+
+table tr:hover {
+    background-color: rgba(61, 126, 170, 0.05);
+}
+
+/* Skills Section - Enhanced */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.skill-category {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.skill-category h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.skill-bar {
+    margin-bottom: 2rem;
+}
+
+.skill-bar h4 {
+    margin-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.progress {
+    height: 8px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--secondary), var(--accent));
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Testimonials Section - Enhanced */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.testimonial {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial:before {
+    content: '\201C';
+    font-size: 5rem;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: rgba(61, 126, 170, 0.1);
+    font-family: Georgia, serif;
+}
+
+.testimonial img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 3px solid var(--light);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+    line-height: 1.8;
+}
+
+.testimonial-author h4 {
+    margin-bottom: 0.3rem;
+    color: var(--primary);
+}
+
+.testimonial-author p {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+/* Contact Section - Enhanced */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info i {
+    margin-right: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--secondary);
+    width: 50px;
+    height: 50px;
+    background: rgba(61, 126, 170, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.contact-info div:hover i {
+    background: var(--secondary);
+    color: white;
+}
+
+.contact-form {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.8rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(61, 126, 170, 0.1);
+}
+
+.contact-form textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+/* Footer - Enhanced */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.8rem;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    transition: var(--transition);
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    background: var(--accent);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .about-grid,
+    .contact-grid,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image:before,
+    .about-image:after {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+}
+
+/* Additional Premium Features */
+.scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+/* Add subtle animation to progress bars */
+.skill-bar.animate .progress-bar {
+    animation: progressAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 0%;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Juma<span>Musima</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Legal Mind, Developer's Code</h1>
+                <p>Combining legal expertise with full-stack development skills to create impactful digital solutions for the legal industry.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                   <img src="/img/portfolioo.jpg" alt="Jane Doe Portrait" width="600" height="400">
+
+                </div>
+                <div class="about-content">
+                    <h3>Juma Musima, J.M.</h3>
+                    <p>I am a licensed attorney with 8+ years of experience in corporate law, intellectual property, and legal tech, combined with full-stack development expertise specializing in Django, JavaScript, and database architecture.</p>
+                    <p>My unique background enables me to bridge the gap between legal requirements and technological solutions, creating efficient digital tools that address specific legal challenges and streamline operations for law firms and legal departments.</p>
+                    <p>After graduating from Harvard Law School and practicing at a top-tier firm, I pursued my passion for technology through a software engineering bootcamp and now specialize in creating custom legal tech solutions that combine my expertise in both fields.</p>
+                    <div class="buttons">
+                        <a href="#contact" class="btn">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Consultation</h3>
+                    <p>Expert legal advice on intellectual property, tech contracts, and compliance issues for businesses and startups.</p>
+                </div>
+                <div class="card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Custom web applications built with Django, JavaScript, and modern front-end technologies tailored to your business needs.</p>
+                </div>
+                <div class="card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Solutions</h3>
+                    <p>Efficient database design, optimization, and management for secure storage and retrieval of sensitive legal data.</p>
+                </div>
+                <div class="card">
+                    <div class="service-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Legal Tech Solutions</h3>
+                    <p>Custom software applications designed specifically for law firms, legal departments, and legal processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="tabs">
+            <button class="tab-btn active" data-category="all">All</button>
+            <button class="tab-btn" data-category="legal">Legal Tech</button>
+            <button class="tab-btn" data-category="web">Web Apps</button>
+            <button class="tab-btn" data-category="database">Database</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="legal">
+                <img src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg" alt="Contract Analysis Platform">
+                <div class="project-info">
+                    <h3>Contract Analysis Platform</h3>
+                    <p>Django-based application for automated contract review and risk assessment.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg" alt="Law Firm Dashboard">
+                <div class="project-info">
+                    <h3>Law Firm Dashboard</h3>
+                    <p>Interactive client management system with billing integration using Django and React.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="database">
+                <img src="https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg" alt="Case Management System">
+                <div class="project-info">
+                    <h3>Case Management System</h3>
+                    <p>PostgreSQL database with Django ORM for efficient case tracking and document management.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="legal">
+                <img src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg" alt="IP Portfolio Tracker">
+                <div class="project-info">
+                    <h3>IP Portfolio Tracker</h3>
+                    <p>Intellectual property management application with deadline notifications and document generation.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg" alt="Legal Research Assistant">
+                <div class="project-info">
+                    <h3>Legal Research Assistant</h3>
+                    <p>Full-stack web app with advanced search functionality for legal precedents and statutes.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="database">
+                <img src="https://images.pexels.com/photos/4968391/pexels-photo-4968391.jpeg" alt="Client Data Warehouse">
+                <div class="project-info">
+                    <h3>Client Data Warehouse</h3>
+                    <p>Secure data warehouse for client information with advanced analytics and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- Database Demo -->
+            <div class="database-demo">
+                <h3>Sample Database Schema</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Table Name</th>
+                            <th>Primary Key</th>
+                            <th>Fields</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cases</td>
+                            <td>case_id</td>
+                            <td>client_id, title, description, status, open_date, close_date</td>
+                            <td>Stores information about legal cases</td>
+                        </tr>
+                        <tr>
+                            <td>Clients</td>
+                            <td>client_id</td>
+                            <td>name, email, phone, address, industry, joined_date</td>
+                            <td>Client information and contact details</td>
+                        </tr>
+                        <tr>
+                            <td>Documents</td>
+                            <td>doc_id</td>
+                            <td>case_id, title, file_path, uploaded_date, category</td>
+                            <td>Legal documents related to cases</td>
+                        </tr>
+                        <tr>
+                            <td>Invoices</td>
+                            <td>invoice_id</td>
+                            <td>client_id, amount, issue_date, due_date, status</td>
+                            <td>Billing information for clients</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Legal Skills</h3>
+                    <div class="skill-bar">
+                        <h4>Contract Law <span>95%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>Intellectual Property <span>90%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>Corporate Law <span>85%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>Compliance <span>80%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>Legal Research <span>90%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-bar">
+                        <h4>Django <span>95%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>JavaScript <span>85%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>SQL/PostgreSQL <span>90%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>HTML/CSS <span>85%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <h4>API Development <span>80%</span></h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Testimonials Section -->
+<section id="testimonials" class="section">
+    <div class="container">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial card">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Client 1">
+                <div class="testimonial-text">
+                    "Juma created a custom case management system that transformed our firm's efficiency. Her understanding of both legal processes and technology made her the perfect partner for our project."
+                </div>
+                <div class="testimonial-author">
+                    <h4>Robert Smith</h4>
+                    <p>Managing Partner, Smith & Associates</p>
+                </div>
+            </div>
+            <div class="testimonial card">
+                <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Client 2">
+                <div class="testimonial-text">
+                    "Working with Jane was excellent. She provided solid legal guidance on our software licensing while simultaneously developing our contract automation system. Truly a unique professional."
+                </div>
+                <div class="testimonial-author">
+                    <h4>Sarah Johnson</h4>
+                    <p>CEO, LegalTech Solutions</p>
+                </div>
+            </div>
+            <div class="testimonial card">
+                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Client 3">
+                <div class="testimonial-text">
+                    "Juma's database design for our intellectual property portfolio has been revolutionary. The system is intuitive, secure, and has significantly reduced our administrative overhead."
+                </div>
+                <div class="testimonial-author">
+                    <h4>Michael Chen</h4>
+                    <p>IP Director, Innovate Inc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>jumamusima@gmail.com</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <p>0113300632</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>123 Legal Tech Ave, San Francisco, CA</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-briefcase"></i>
+                            <p>Available for consulting and project work</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+            </div>
+            <p>&copy; 2025 Juma Musima. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Project filtering
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.dataset.category;
+
+                    // Update active button
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Simulate form submission
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                alert('Thanks for your message! I will get back to you soon.');
+                contactForm.reset();
+
+                // In a real application, you would send this data to a server
+                console.log('Form data:', formData);
+            });
+
+            // Simple database demo functionality
+            const demoDb = {
+                cases: [
+                    { id: 1, client_id: 101, title: "Contract Review", status: "Active" },
+                    { id: 2, client_id: 102, title: "IP Filing", status: "Closed" }
+                ],
+                clients: [
+                    { id: 101, name: "Acme Corp", industry: "Technology" },
+                    { id: 102, name: "Legal Solutions Inc", industry: "Legal" }
+                ]
+            };
+
+            // Add database interaction functionality if needed
+            console.log("Database loaded:", demoDb);
+
+            // Fixed header with scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(44, 62, 80, 0.9)';
+                } else {
+                    header.style.background = 'var(--primary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
